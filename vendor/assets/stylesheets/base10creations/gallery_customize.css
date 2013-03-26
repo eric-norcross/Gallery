@@ -1,0 +1,67 @@
+/*======================================*/
+/* CUSTOMIZED STYLES */
+/*======================================*/
+.gallery {
+  clear: both;
+  display: block;
+  margin: 10px;
+}
+
+#relatedProducts .items {
+
+  width: 377px;
+}
+
+#relatedItems .items {
+  width: 750px;
+}
+
+.slider {
+  display: inline-block;
+}
+
+.control {
+  font-size: 80px;
+  float: left;
+  padding-top: 93px;
+}
+   
+.control a,
+.control a:link,
+.control a:active,
+.control a:hover {
+  color: #000;
+  margin: 0 10px;
+  text-decoration: none;
+}
+    
+.control a:hover {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.control:last-child {
+}
+
+.items {
+  float: left;
+  padding: 10px;
+  border-color: #000;
+  border-style: solid;
+  border-width: 3px;
+}
+
+ul {
+
+}
+
+ul li {
+  margin-right: 20px;
+}
+
+ul li div {
+  border-color: #ccc;
+  border-style: solid;
+  border-width: 3px;
+  padding: 5px;
+}

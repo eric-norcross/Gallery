@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Gallery</title>
+    <link href="vendor/assets/stylesheets/base10creations/baseline.css" rel="stylesheet"  />
+    <link href="vendor/assets/stylesheets/base10creations/gallery_required.css" rel="stylesheet"  />
+    <link href="vendor/assets/stylesheets/base10creations/gallery_customize.css" rel="stylesheet"  />
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="vendor/assets/javascripts/base10creations/Gallery.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <div class="gallery" id="relatedProducts">
+      <div class="mainImage">
+        <!-- MAIN IMAGE -->
+      </div>
+      <div class="slider">
+        <div class="control previous">
+          <a href="#">&lsaquo;</a>
+        </div>
+        <div class="items">
+          <ul>
+            <li><div><img src="assets/images/1.jpg" /></div></li>
+            <li><div><img src="assets/images/2.jpg" /></div></li>
+            <li><div><img src="assets/images/3.jpg" /></div></li>
+            <li><div><img src="assets/images/4.jpg" /></div></li>
+          </ul>
+        </div>
+        <div class="control next">
+          <a href="#">&rsaquo;</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="gallery" id="relatedItems">
+      <div class="mainImage">
+        <!-- MAIN IMAGE -->
+      </div>
+      <div class="slider">
+        <div class="control previous">
+          <a href="#">&lsaquo;</a>
+        </div>
+        <div class="items">
+          <ul>
+            <li><div><img src="assets/images/1.jpg" /></div></li>
+            <li><div><img src="assets/images/2.jpg" /></div></li>
+            <li><div><img src="assets/images/3.jpg" /></div></li>
+            <li><div><img src="assets/images/4.jpg" /></div></li>
+            <li><div><img src="assets/images/5.jpg" /></div></li>
+            <li><div><img src="assets/images/6.jpg" /></div></li>
+            <li><div><img src="assets/images/7.jpg" /></div></li>
+            <li><div><img src="assets/images/8.jpg" /></div></li>
+            <li><div><img src="assets/images/9.jpg" /></div></li>
+          </ul>
+        </div>
+        <div class="control next">
+          <a href="#">&rsaquo;</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function(){
+        //Required
+        $(".gallery").each(function(index) {
+          var gallery = new Gallery($(this));
+          gallery.init();
+        });
+      });
+    </script>
+  </body>
+</html>

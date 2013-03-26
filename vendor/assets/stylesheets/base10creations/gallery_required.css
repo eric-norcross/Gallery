@@ -1,0 +1,29 @@
+/*======================================*/
+/* MINIMUM REQUIRED STYLES */
+/*======================================*/
+
+/* 
+In addition to the below, the previous 
+and next buttons must have a ".previous" 
+and ".next" class respectivly.
+*/
+
+.items {
+  /* 
+  Must have a width. 
+  Width overridden per id. e.g.: 
+  #products .items { width: 450px; } 
+  See "scroller_customize.css"
+  */
+  width: 300px; /* default width */
+  overflow: hidden;
+  position: relative;
+}
+
+ul {
+  position: relative;
+}
+
+ul li {
+  float: left;
+}
