@@ -1,11 +1,12 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Gallery</title>
-    <link href="vendor/assets/stylesheets/base10creations/baseline.css" rel="stylesheet"  />
-    <link href="vendor/assets/stylesheets/base10creations/gallery_required.css" rel="stylesheet"  />
-    <link href="vendor/assets/stylesheets/base10creations/gallery_customize.css" rel="stylesheet"  />
+    <link href="vendor/assets/stylesheets/base10creations/baseline.css" rel="stylesheet">
+    <link href="vendor/assets/stylesheets/base10creations/demo_page.css" rel="stylesheet">
+    <link href="vendor/assets/stylesheets/base10creations/gallery_required.css" rel="stylesheet">
+    <link href="vendor/assets/stylesheets/base10creations/gallery_customize.css" rel="stylesheet">
 
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="vendor/assets/javascripts/base10creations/Gallery.js"></script>
@@ -16,20 +17,19 @@
 
   </head>
   <body>
+    <h1>Stand alone Gallery:</h1>
     <div class="gallery" id="relatedProducts">
-      <div class="mainImage">
-        <!-- MAIN IMAGE -->
-      </div>
-      <div class="slider">
+       <!--<div class="galleryImage"></div>--> <!-- no main image for this gallery, scroller only -->
+      <div class="scroller">
         <div class="control previous">
           <a href="#">&lsaquo;</a>
         </div>
-        <div class="items">
+        <div class="itemsContainer">
           <ul>
-            <li><div><img src="assets/images/1.jpg" /></div></li>
-            <li><div><img src="assets/images/2.jpg" /></div></li>
-            <li><div><img src="assets/images/3.jpg" /></div></li>
-            <li><div><img src="assets/images/4.jpg" /></div></li>
+            <li><div><a href="#"><img src="assets/images/small/1.jpg"></a></div></li>
+            <li><div><a href="#"><img src="assets/images/small/2.jpg"></a></div></li>
+            <li><div><a href="#"><img src="assets/images/small/3.jpg"></a></div></li>
+            <li><div><a href="#"><img src="assets/images/small/4.jpg"></a></div></li>
           </ul>
         </div>
         <div class="control next">
@@ -38,26 +38,110 @@
       </div>
     </div>
     
+    <hr>
+    <h1>Gallery with main image:</h1>
     <div class="gallery" id="relatedItems">
-      <div class="mainImage">
-        <!-- MAIN IMAGE -->
+      <div class="galleryImage">
+        <img src="assets/images/medium/1.jpg">
       </div>
-      <div class="slider">
+      <div class="scroller">
         <div class="control previous">
           <a href="#">&lsaquo;</a>
         </div>
-        <div class="items">
+        <div class="itemsContainer">
           <ul>
-            <li><div><img src="assets/images/1.jpg" /></div></li>
-            <li><div><img src="assets/images/2.jpg" /></div></li>
-            <li><div><img src="assets/images/3.jpg" /></div></li>
-            <li><div><img src="assets/images/4.jpg" /></div></li>
-            <li><div><img src="assets/images/5.jpg" /></div></li>
-            <li><div><img src="assets/images/6.jpg" /></div></li>
-            <li><div><img src="assets/images/7.jpg" /></div></li>
-            <li><div><img src="assets/images/8.jpg" /></div></li>
-            <li><div><img src="assets/images/9.jpg" /></div></li>
+            <li>
+              <div>
+                <a href="assets/images/large/1.jpg">
+                  <img  src="assets/images/small/1.jpg" 
+                        data-medium="assets/images/medium/1.jpg" 
+                        data-large="assets/images/large/1.jpg"
+                  >
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="assets/images/large/2.jpg">
+                  <img  src="assets/images/small/2.jpg" 
+                        data-medium="assets/images/medium/2.jpg" 
+                        data-large="assets/images/large/2.jpg"
+                  >
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="assets/images/large/3.jpg">
+                  <img  src="assets/images/small/3.jpg" 
+                        data-medium="assets/images/medium/3.jpg" 
+                        data-large="assets/images/large/3.jpg"
+                  >
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="assets/images/large/4.jpg">
+                  <img  src="assets/images/small/4.jpg" 
+                        data-medium="assets/images/medium/4.jpg" 
+                        data-large="assets/images/large/4.jpg"
+                  >
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="assets/images/large/5.jpg">
+                  <img  src="assets/images/small/5.jpg" 
+                        data-medium="assets/images/medium/5.jpg" 
+                        data-large="assets/images/large/5.jpg"
+                  >
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="assets/images/large/6.jpg">
+                  <img  src="assets/images/small/6.jpg" 
+                        data-medium="assets/images/medium/6.jpg" 
+                        data-large="assets/images/large/6.jpg"
+                  >
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="assets/images/large/7.jpg">
+                  <img  src="assets/images/small/7.jpg" 
+                        data-medium="assets/images/medium/7.jpg" 
+                        data-large="assets/images/large/7.jpg"
+                  >
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="assets/images/large/8.jpg">
+                  <img  src="assets/images/small/8.jpg" 
+                        data-medium="assets/images/medium/8.jpg" 
+                        data-large="assets/images/large/8.jpg"
+                  >
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="assets/images/large/9.jpg">
+                  <img  src="assets/images/small/9.jpg" 
+                        data-medium="assets/images/medium/9.jpg" 
+                        data-large="assets/images/large/9.jpg"
+                  >
+                </a>
+              </div>
+            </li>
           </ul>
+          
         </div>
         <div class="control next">
           <a href="#">&rsaquo;</a>

@@ -1,12 +1,18 @@
 Gallery
 =======
 
-Version: 0.1
+Version: 0.2
 
 ## Getting started
 Checkout the code from this repository
 
 `git clone https://github.com/eric-norcross/Gallery.git`
+
+## Features
+1. Gallery with or without large main image
+1. Multiple Galleries on a page
+1. HTML5
+1. Minimal required CSS
 
 ##Demo
 http://www.base10creations.com/demos/gallery

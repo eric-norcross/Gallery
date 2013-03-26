@@ -3,20 +3,23 @@
 /*======================================*/
 .gallery {
   clear: both;
-  display: block;
   margin: 10px;
 }
 
-#relatedProducts .items {
-
+#relatedProducts .itemsContainer {
   width: 377px;
 }
 
-#relatedItems .items {
+#relatedItems .itemsContainer {
   width: 750px;
 }
 
-.slider {
+.galleryImage {
+  margin-bottom: 20px;
+  margin-left: 130px;
+}
+
+.scroller {
   display: inline-block;
 }
 
@@ -43,7 +46,7 @@
 .control:last-child {
 }
 
-.items {
+.itemsContainer {
   float: left;
   padding: 10px;
   border-color: #000;

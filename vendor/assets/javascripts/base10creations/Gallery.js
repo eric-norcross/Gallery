@@ -1,40 +1,57 @@
 function Gallery(gallery) {
   //console&&console.log("Gallery - Constructor");
 
-  var itemsList   = gallery.find("ul");
-      btnNext     = gallery.find(".next");
-      btnPrevious = gallery.find(".previous");
-
+  var itemsList     = gallery.find("ul"),
+      btnNext       = gallery.find(".next"),
+      btnPrevious   = gallery.find(".previous"),
+      items         = itemsList.find("li"),
+      galleryImage  = gallery.find(".galleryImage").find("img");
+      
   //PUBLIC
   var public = {
     //public vars
     id:                   null,
 
     params: {
-      offset:             null,
-      totalItems:         null, 
-      itemWidth:          null,
-      totalWidth:         null,
-      visibleWidth:       null,
-      stopPosition:       null
+      offset:             0,
+      totalItems:         0, 
+      itemWidth:          0,
+      totalWidth:         0,
+      visibleWidth:       0,
+      stopPosition:       0
     },
     
 
     //public methods
     init: function() {
       //console&&console.log("Gallery - init()");
-
       this.id                    = gallery.attr("id");
-      this.params.totalItems     = itemsList.find("li").length; 
+      this.params.totalItems     = items.length; 
+
 
       //IE & FF Load the image before the script
-      if (itemsList.find("li").first().find("img").outerWidth(true)) {
+      if (items.first().find("img").outerWidth(true)) {
         loadCompleteHandler({data:{params:this.params}})
       } else {
         //Add and event listener for webkit
-        itemsList.find("li").first().find("img").load({params:this.params},loadCompleteHandler);
+        items.first().find("img").load({params:this.params},loadCompleteHandler);
       }
-            
+
+      
+      
+      if (galleryImage.val() == "") {
+        console.log("HERE");
+        items.each(function(index){
+          $(this).find("a").click(function(){
+            var newImage = $(this).find("img").attr("data-medium");
+            galleryImage.attr("src", newImage);
+            //console.log($(this).find("img").attr("data-medium"));
+            return false;
+          });
+        });
+      }
+      
+
       btnNext.click(this.params, next);
       btnPrevious.click(this.params, previous);
 
@@ -50,10 +67,16 @@ function Gallery(gallery) {
   //PRIVATE
   var loadCompleteHandler = function(event) {
     //console&&console.log("Gallery - loadCompleteHandler()");
-    event.data.params.offset          = parseInt(itemsList.find("li").last().css("margin-right"));
-    event.data.params.itemWidth       = itemsList.find("li").first().outerWidth(true);
-    event.data.params.totalWidth      = event.data.params.itemWidth * event.data.params.totalItems;
-    event.data.params.visibleWidth    = gallery.find(".items").width();
+    event.data.params.offset          = parseInt(items.last().css("margin-right"));
+    event.data.params.itemWidth       = items.first().outerWidth(true);
+
+    items.each(function(index) {
+      //console.log(scroller.attr("id") + " li width: " + $(this).outerWidth(true));
+      event.data.params.totalWidth += $(this).outerWidth(true);
+    });
+
+    //event.data.params.totalWidth      = event.data.params.itemWidth * event.data.params.totalItems;
+    event.data.params.visibleWidth    = gallery.find(".itemsContainer").width();
     event.data.params.stopPosition    = (event.data.params.visibleWidth - event.data.params.totalWidth + event.data.params.offset);
 
     /*
