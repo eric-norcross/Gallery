@@ -8,6 +8,9 @@ Checkout the code from this repository
 
 `git clone https://github.com/eric-norcross/Gallery.git`
 
+##Demo
+http://www.base10creations.com/demos/gallery
+
 ## Tested on
 1. Chrome - 25.0.1364.172; (OS X 10.8.3)
 1. FireFox - 19.0.2; (OS X 10.8.3)
