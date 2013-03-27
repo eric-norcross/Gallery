@@ -14,6 +14,13 @@ Checkout the code from this repository
 1. HTML5
 1. Minimal required CSS
 
+## Up Next
+1. Variable item width support
+1. Infinite scrolling
+1. Figure out a better way to do: itemsList.width(1000000);
+1. Fork for Non-jQuery use
+1. Integrate CSS animation instead of jQuery
+
 ##Demo
 http://www.base10creations.com/demos/gallery
 

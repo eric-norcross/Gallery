@@ -17,7 +17,7 @@
 
   </head>
   <body>
-    <h1>Stand alone Gallery:</h1>
+    <h1>Stand-alone Gallery:</h1>
     <div class="gallery" id="relatedProducts">
        <!--<div class="galleryImage"></div>--> <!-- no main image for this gallery, scroller only -->
       <div class="scroller">
@@ -26,7 +26,7 @@
         </div>
         <div class="itemsContainer">
           <ul>
-            <li><div><a href="#"><img src="assets/images/small/1.jpg"></a></div></li>
+            <li><div><a href="#"><img id="test" src="assets/images/small/1.jpg"></a></div></li>
             <li><div><a href="#"><img src="assets/images/small/2.jpg"></a></div></li>
             <li><div><a href="#"><img src="assets/images/small/3.jpg"></a></div></li>
             <li><div><a href="#"><img src="assets/images/small/4.jpg"></a></div></li>
@@ -151,11 +151,12 @@
 
     <script>
       $(document).ready(function(){
-        //Required
+
         $(".gallery").each(function(index) {
           var gallery = new Gallery($(this));
           gallery.init();
         });
+
       });
     </script>
   </body>
