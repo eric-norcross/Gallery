@@ -1,7 +1,7 @@
 Gallery
 =======
 
-Version: 0.2
+Version: 0.3
 
 ## Getting started
 Checkout the code from this repository
