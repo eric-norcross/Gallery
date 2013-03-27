@@ -19,7 +19,7 @@ Checkout the code from this repository
 1. Infinite scrolling
 1. Figure out a better way to do: itemsList.width(1000000);
 1. Fork for Non-jQuery use
-1. Integrate CSS animation instead of jQuery
+1. Integrate Greensock animation instead of jQuery
 
 ##Demo
 http://www.base10creations.com/demos/gallery
