@@ -5,7 +5,7 @@ function Gallery(gallery) {
   var itemsList     = gallery.find("ul"),
       btnNext       = gallery.find(".next"),
       btnPrevious   = gallery.find(".previous"),
-      galleryImage  = gallery.find(".galleryImage").find("img"),
+      galleryImage  = gallery.find(".gallery_image").find("img"),
 
       items         = itemsList.find("li"),
       images        = [],
@@ -107,7 +107,7 @@ function Gallery(gallery) {
         params.totalWidth   += $(this).outerWidth(true);
       });
 
-      params.visibleWidth    = gallery.find(".itemsContainer").width();
+      params.visibleWidth    = gallery.find(".items_container").width();
       params.stopPosition    = params.visibleWidth - params.totalWidth + params.offset;
 
       

@@ -8,7 +8,7 @@ and next buttons must have a ".previous"
 and ".next" class respectivly.
 */
 
-.itemsContainer {
+.items_container {
   /* 
   Must have a width. 
   Width overridden per id. e.g.: 
@@ -20,15 +20,15 @@ and ".next" class respectivly.
   position: relative;
 }
 
-.itemsContainer ul {
+.items_container ul {
   position: relative;
 }
 
-.itemsContainer ul li {
+.items_container ul li {
   float: left;
 }
 
-.itemsContainer ul li img {
+.items_container ul li img {
   /*
   For some reason IE8 is requiring this.
   If it's not here, and you're using a 
