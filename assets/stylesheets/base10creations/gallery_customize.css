@@ -6,15 +6,15 @@
   margin: 10px;
 }
 
-#related_products .items_container {
+#related-products .items-container {
   width: 377px;
 }
 
-#related_items .items_container {
+#related-items .items-container {
   width: 750px;
 }
 
-.gallery_image {
+.gallery-image {
   margin-bottom: 20px;
   margin-left: 130px;
 }
@@ -46,7 +46,7 @@
 .control:last-child {
 }
 
-.items_container {
+.items-container {
   float: left;
   padding: 10px;
   border-color: #000;

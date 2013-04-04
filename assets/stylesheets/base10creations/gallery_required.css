@@ -8,27 +8,27 @@ and next buttons must have a ".previous"
 and ".next" class respectivly.
 */
 
-.items_container {
+.items-container {
   /* 
   Must have a width. 
   Width overridden per id. e.g.: 
   #products .items { width: 450px; } 
-  See "scroller_customize.css"
+  See "gallery_customize.css"
   */
   width: 300px; /* default width */
   overflow: hidden;
   position: relative;
 }
 
-.items_container ul {
+.items-container ul {
   position: relative;
 }
 
-.items_container ul li {
+.items-container ul li {
   float: left;
 }
 
-.items_container ul li img {
+.items-container ul li img {
   /*
   For some reason IE8 is requiring this.
   If it's not here, and you're using a 
