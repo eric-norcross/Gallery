@@ -5,7 +5,8 @@ function Gallery(gallery) {
   var itemsList     = gallery.find("ul"),
       btnNext       = gallery.find(".next"),
       btnPrevious   = gallery.find(".previous"),
-      galleryImage  = gallery.find(".gallery-image").find("img"),
+      galleryImage  = gallery.find(".gallery-image"),
+      imageControls = gallery.find(".image-controls"),
 
       items         = itemsList.find("li"),
       images        = [],
@@ -74,12 +75,15 @@ function Gallery(gallery) {
       just have a plain scroller remove the 
       "galleryImage" div from the html.
       */
-      if (galleryImage.val() == "") {
+      if (galleryImage.find("img").val() == "") {
         // console.log("'galleryImage' exists...");
         items.each(function(index){
           $(this).find("a").click(function(){
+            var largeImage = $(this).find("img").attr("data-large");
             var newImage = $(this).find("img").attr("data-medium");
-            galleryImage.attr("src", newImage);
+            imageControls.find("#enlarge").find("a").attr("href", largeImage);
+            galleryImage.find("a").attr("href", largeImage);
+            galleryImage.find("img").attr("src", newImage);
             return false;
           });
         });
@@ -114,8 +118,8 @@ function Gallery(gallery) {
       /*
       Sets the width of the UL. It would be better to use 
       "display: inline-block" or even set this with css
-      and not have to set here, but IE sucks. And this is 
-      easier than the alternatives.
+      and not have to set here, but IE sucks. For now, this is 
+      simpler than the alternatives.
       */
       itemsList.width(1000000);
 

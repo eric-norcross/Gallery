@@ -26,6 +26,7 @@ and ".next" class respectivly.
 
 .items-container ul li {
   float: left;
+  display: inline; /*necessary for IE 9*/
 }
 
 .items-container ul li img {
@@ -40,4 +41,31 @@ and ".next" class respectivly.
   and one is showing up.
   */
   border-color: #000;
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+While not strictly required, the styels below provide additionaly functionality
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.image-container {
+  /*
+  Used to center the image vertically 
+  and horizontally if thumbnail images 
+  are of varying sizes
+  */
+  display:table-cell;
+  vertical-align:middle;
+  text-align: center;
+
+  /*
+  Set to max dimensions for container.
+  This can be done in the gallery-customize.css
+  if you have multiple galleries.
+  */
+  /*
+  height:100px;
+  width:100px;
+  */
 }

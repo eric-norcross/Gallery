@@ -10,6 +10,7 @@
 
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="assets/javascripts/base10creations/Gallery.js"></script>
+    <script src="vendor/assets/javascripts/jquery.tools.min.js"></script>
 
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -26,7 +27,7 @@
         </div>
         <div class="items-container">
           <ul>
-            <li><div><a href="#"><img id="test" src="assets/images/small/1.jpg"></a></div></li>
+            <li><div><a href="#"><img src="assets/images/small/1.jpg"></a></div></li>
             <li><div><a href="#"><img src="assets/images/small/2.jpg"></a></div></li>
             <li><div><a href="#"><img src="assets/images/small/3.jpg"></a></div></li>
             <li><div><a href="#"><img src="assets/images/small/4.jpg"></a></div></li>
@@ -37,8 +38,9 @@
         </div>
       </div>
     </div>
-    
+
     <hr>
+    
     <h1>Gallery with main image:</h1>
     <div class="gallery" id="related-items">
       <div class="gallery-image">
@@ -51,7 +53,7 @@
         <div class="items-container">
           <ul>
             <li>
-              <div>
+              <div class="image-container">
                 <a href="assets/images/large/1.jpg">
                   <img  src="assets/images/small/1.jpg" 
                         data-medium="assets/images/medium/1.jpg" 
@@ -59,9 +61,13 @@
                   >
                 </a>
               </div>
+              <div class="info">
+                <h3>Title</h3>
+                <p>Some Text</p>
+              </div>
             </li>
             <li>
-              <div>
+              <div class="image-container">
                 <a href="assets/images/large/2.jpg">
                   <img  src="assets/images/small/2.jpg" 
                         data-medium="assets/images/medium/2.jpg" 
@@ -69,9 +75,13 @@
                   >
                 </a>
               </div>
+              <div class="info">
+                <h3>Title</h3>
+                <p>Some Text</p>
+              </div>
             </li>
             <li>
-              <div>
+              <div class="image-container">
                 <a href="assets/images/large/3.jpg">
                   <img  src="assets/images/small/3.jpg" 
                         data-medium="assets/images/medium/3.jpg" 
@@ -79,9 +89,13 @@
                   >
                 </a>
               </div>
+              <div class="info">
+                <h3>Title</h3>
+                <p>Some Text</p>
+              </div>
             </li>
             <li>
-              <div>
+              <div class="image-container">
                 <a href="assets/images/large/4.jpg">
                   <img  src="assets/images/small/4.jpg" 
                         data-medium="assets/images/medium/4.jpg" 
@@ -89,9 +103,13 @@
                   >
                 </a>
               </div>
+              <div class="info">
+                <h3>Title</h3>
+                <p>Some Text</p>
+              </div>
             </li>
             <li>
-              <div>
+              <div class="image-container">
                 <a href="assets/images/large/5.jpg">
                   <img  src="assets/images/small/5.jpg" 
                         data-medium="assets/images/medium/5.jpg" 
@@ -99,9 +117,13 @@
                   >
                 </a>
               </div>
+              <div class="info">
+                <h3>Title</h3>
+                <p>Some Text</p>
+              </div>
             </li>
             <li>
-              <div>
+              <div class="image-container">
                 <a href="assets/images/large/6.jpg">
                   <img  src="assets/images/small/6.jpg" 
                         data-medium="assets/images/medium/6.jpg" 
@@ -109,9 +131,13 @@
                   >
                 </a>
               </div>
+              <div class="info">
+                <h3>Title</h3>
+                <p>Some Text</p>
+              </div>
             </li>
             <li>
-              <div>
+              <div class="image-container">
                 <a href="assets/images/large/7.jpg">
                   <img  src="assets/images/small/7.jpg" 
                         data-medium="assets/images/medium/7.jpg" 
@@ -119,9 +145,13 @@
                   >
                 </a>
               </div>
+              <div class="info">
+                <h3>Title</h3>
+                <p>Some Text</p>
+              </div>
             </li>
             <li>
-              <div>
+              <div class="image-container">
                 <a href="assets/images/large/8.jpg">
                   <img  src="assets/images/small/8.jpg" 
                         data-medium="assets/images/medium/8.jpg" 
@@ -129,9 +159,13 @@
                   >
                 </a>
               </div>
+              <div class="info">
+                <h3>Title</h3>
+                <p>Some Text</p>
+              </div>
             </li>
             <li>
-              <div>
+              <div class="image-container">
                 <a href="assets/images/large/9.jpg">
                   <img  src="assets/images/small/9.jpg" 
                         data-medium="assets/images/medium/9.jpg" 
@@ -139,9 +173,12 @@
                   >
                 </a>
               </div>
+              <div class="info">
+                <h3>Title</h3>
+                <p>Some Text</p>
+              </div>
             </li>
           </ul>
-          
         </div>
         <div class="control next">
           <a href="#">&rsaquo;</a>
