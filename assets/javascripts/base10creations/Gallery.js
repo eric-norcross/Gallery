@@ -80,10 +80,13 @@ function Gallery(gallery) {
         items.each(function(index){
           $(this).find("a").click(function(){
             var largeImage = $(this).find("img").attr("data-large");
+            var fullImage = $(this).find("img").attr("data-full"); 
             var newImage = $(this).find("img").attr("data-medium");
-            imageControls.find("#enlarge").find("a").attr("href", largeImage);
-            galleryImage.find("a").attr("href", largeImage);
-            galleryImage.find("img").attr("src", newImage);
+            imageControls.find(".enlarge").find("a").attr("href", largeImage);
+            galleryImage.find(".zoomImg").attr("src", fullImage);
+            galleryImage.find(".gallery-view").attr("src", newImage);
+            galleryImage.find(".gallery-view").attr("data-large", largeImage);
+            galleryImage.find(".gallery-view").attr("data-full", fullImage); 
             return false;
           });
         });
@@ -114,6 +117,15 @@ function Gallery(gallery) {
       params.visibleWidth    = gallery.find(".items-container").width();
       params.stopPosition    = params.visibleWidth - params.totalWidth + params.offset;
 
+      console.log("totalWidth: " + params.totalWidth);
+      console.log("visibleWidth: " + params.visibleWidth);
+
+      if (params.totalWidth < params.visibleWidth) {
+        btnNext.addClass("disabled")
+      } else {
+        btnNext.addClass("not-disabled")
+      }
+
       
       /*
       Sets the width of the UL. It would be better to use 
@@ -139,8 +151,11 @@ function Gallery(gallery) {
       var animateTo;
       var nextPosition = itemsList.position().left - params.data.itemWidth;
 
+      btnPrevious.removeClass("disabled");
+
       if (nextPosition < params.data.stopPosition) {
         animateTo = params.data.stopPosition;
+        btnNext.addClass("disabled");
       } else {
         animateTo = nextPosition;
       }
@@ -160,8 +175,11 @@ function Gallery(gallery) {
       //Scrolls back -= itemWidth
       var nextPosition = itemsList.position().left + params.data.itemWidth;
 
+      btnNext.removeClass("disabled");
+
       if (nextPosition > 0) {
         animateTo = 0;
+        btnPrevious.addClass("disabled");
       } else {
         animateTo = nextPosition;
       }

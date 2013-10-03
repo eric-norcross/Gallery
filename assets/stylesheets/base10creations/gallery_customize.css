@@ -23,6 +23,18 @@
   display: inline-block;
 }
 
+.disabled {
+  opacity: 0.4;
+  filter:alpha(opacity = 40); /* For IE8 and earlier */
+}
+
+.control.disabled a,
+.control.disabled a:hover {
+  color: inherit;
+  cursor: default;
+}
+
+
 .control {
   font-size: 80px;
   float: left;

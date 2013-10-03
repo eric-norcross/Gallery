@@ -22,7 +22,7 @@
     <div class="gallery" id="related-products">
        <!--<div class="gallery-image"></div>--> <!-- no main image for this gallery, scroller only -->
       <div class="scroller">
-        <div class="control previous">
+        <div class="control previous disabled">
           <a href="#">&lsaquo;</a>
         </div>
         <div class="items-container">
@@ -44,10 +44,10 @@
     <h1>Gallery with main image:</h1>
     <div class="gallery" id="related-items">
       <div class="gallery-image">
-        <img src="assets/images/medium/1.jpg">
+        <img src="assets/images/medium/1.jpg" class="gallery-view" alt="image" data-larg="assets/images/large/1.jpg" data-full="assets/images/full/1.jpg">
       </div>
       <div class="scroller">
-        <div class="control previous">
+        <div class="control previous disabled">
           <a href="#">&lsaquo;</a>
         </div>
         <div class="items-container">
@@ -57,7 +57,8 @@
                 <a href="assets/images/large/1.jpg">
                   <img  src="assets/images/small/1.jpg" 
                         data-medium="assets/images/medium/1.jpg" 
-                        data-large="assets/images/large/1.jpg"
+                        data-large="assets/images/large/1.jpg" 
+                        data-full="assets/images/full/1.jpg"
                   >
                 </a>
               </div>
