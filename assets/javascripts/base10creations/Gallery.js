@@ -117,13 +117,8 @@ function Gallery(gallery) {
       params.visibleWidth    = gallery.find(".items-container").width();
       params.stopPosition    = params.visibleWidth - params.totalWidth + params.offset;
 
-      console.log("totalWidth: " + params.totalWidth);
-      console.log("visibleWidth: " + params.visibleWidth);
-
       if (params.totalWidth < params.visibleWidth) {
         btnNext.addClass("disabled")
-      } else {
-        btnNext.addClass("not-disabled")
       }
 
       
@@ -153,7 +148,7 @@ function Gallery(gallery) {
 
       btnPrevious.removeClass("disabled");
 
-      if (nextPosition < params.data.stopPosition) {
+      if (nextPosition <= params.data.stopPosition) {
         animateTo = params.data.stopPosition;
         btnNext.addClass("disabled");
       } else {
@@ -177,7 +172,7 @@ function Gallery(gallery) {
 
       btnNext.removeClass("disabled");
 
-      if (nextPosition > 0) {
+      if (nextPosition >= 0) {
         animateTo = 0;
         btnPrevious.addClass("disabled");
       } else {
